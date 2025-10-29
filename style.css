@@ -1,1 +1,12 @@
-#dramatis_personae {display:grid;}
+body{background: lightskyblue;}
+main{
+    display:grid;
+}
+div{
+    background: violet;
+    padding: 10px;
+    width: 1200px;
+}
+#dramatis_personae {
+    display:grid;
+}
