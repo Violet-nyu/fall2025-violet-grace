@@ -2,7 +2,7 @@ console.log("julep");
 
 const julep_title = document.createElement("h4");
 julep_title.setAttribute("class", "port_julep");
-julep_title.textContent = 'Port Julep Locals"';
+julep_title.textContent = 'Port Julep Locals';
 section.appendChild(julep_title);
 
 const julep_list = document.createElement("ul");
