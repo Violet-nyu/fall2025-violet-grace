@@ -33,6 +33,7 @@ nav{
 #nav_link:hover {
     animation: color-change 1s 1 forwards;
 }
+/* This is a simple little animation to change the color of the boxes around my links when a user hovers over them. Nothing fancy, but some simple responsiveness to the page */
 @keyframes color-change {
     0% {background-color: antiquewhite;}
     100% {background-color: rgb(160, 146, 168);}
