@@ -1,6 +1,6 @@
 console.log("young firls");
 
-const young_firls_title = document.createElement("h4");
+const young_firls_title = document.createElement("h3");
 young_firls_title.setAttribute("class", "young_firls");
 young_firls_title.textContent = 'The Young Firls';
 section.appendChild(young_firls_title);

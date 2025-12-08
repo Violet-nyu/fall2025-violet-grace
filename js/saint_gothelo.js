@@ -1,6 +1,6 @@
 console.log("saint_gothelo");
 
-const saint_gothelo_title = document.createElement("h4");
+const saint_gothelo_title = document.createElement("h3");
 saint_gothelo_title.setAttribute("class", "saint_gothelo");
 saint_gothelo_title.textContent = 'Saint Gothelo sur la Montagne and Aix-en-Montagne';
 section.appendChild(saint_gothelo_title);

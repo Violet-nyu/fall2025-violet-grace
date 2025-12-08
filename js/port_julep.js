@@ -1,6 +1,6 @@
 console.log("julep");
 
-const julep_title = document.createElement("h4");
+const julep_title = document.createElement("h3");
 julep_title.setAttribute("class", "port_julep");
 julep_title.textContent = 'Port Julep Locals';
 section.appendChild(julep_title);

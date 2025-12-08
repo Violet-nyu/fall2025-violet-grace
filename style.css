@@ -1,40 +1,234 @@
-body{
-    background: rgb(24, 48, 63);
-    color:rgb(201, 217, 238);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+/* Story-driven narrative styling for Port Julep */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-main{
-    display:grid;
-    background: rgb(94, 23, 94);
-    padding: 10px;
-    width: 100%;
-    max-width: 800px;
-    border-radius: 25px;
-    color:rgb(201, 217, 238);
+body {
+  font-family: 'Georgia', 'Garamond', serif;
+  line-height: 1.8;
+  color: #1a1a1a;
+  background: #a8a8a8;
+  display: grid;
+  grid-template-columns: 200px 1fr 250px;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
-nav{
-    max-width: 200px;
-    background: rgb(87, 0, 87);
-    border-radius: 20px;
+header {
+  grid-column: 1 / -1;
+  background: #2c1810;
+  color: #f5f1e8;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-#dramatis_personae {
-    display:grid;
+/* Left sidebar - Chapter navigation */
+body > nav:first-of-type {
+  grid-column: 1;
+  background: #3d2817;
+  color: #f5f1e8;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
 }
-#nav_link {
-    width: 80%;
-    max-width: 160px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: antiquewhite;
-    border-radius: 10px;
+body > nav:first-of-type h4 {
+  color: #d4a574;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-#nav_link:hover {
-    animation: color-change 1s 1 forwards;
+body > nav:first-of-type ul {
+  list-style: none;
 }
-/* This is a simple little animation to change the color of the boxes around my links when a user hovers over them. Nothing fancy, but some simple responsiveness to the page */
-@keyframes color-change {
-    0% {background-color: antiquewhite;}
-    100% {background-color: rgb(160, 146, 168);}
+body > nav:first-of-type li {
+  margin: 0.5rem 0;
+}
+body > nav:first-of-type a {
+  color: #f5f1e8;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  border-left: 3px solid transparent;
+  transition: all 0.3s;
+}
+body > nav:first-of-type a:hover {
+  border-left-color: #d4a574;
+  background: rgba(212, 165, 116, 0.1);
+  padding-left: 1rem;
+}
+/* Main content area */
+main {
+  grid-column: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: #f0eada;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+main h1 {
+  font-size: 2.8rem;
+  color: #2c1810;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px double #8b6f47;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+main h2 {
+  font-size: 2rem;
+  color: #3d2817;
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d4a574;
+  scroll-margin-top: 2rem;
+}
+main h3 {
+  font-size: 1.5rem;
+  color: #8b6f47;
+  margin: 1.5rem 0 1rem;
+}
+main h4 {
+  font-size: 1.3rem;
+  color: #8b6f47;
+  margin: 1.3rem 0 1rem;
+}
+main p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-indent: 2rem;
+  font-size: 1.1rem;
+}
+main p:first-of-type,
+main aside + p {
+  text-indent: 0;
+}
+main p::first-letter {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #5e492b;
+}
+main ul {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+main a:link, a:visited {
+  color: #5e492b;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 5%;
+}
+main a:hover {
+  color: #5e492b;
+  text-decoration: none;
+  background-color: #cfc8b5;
+  padding: 2px 6px;
+  border-radius: 5%;
+}
+main a:active {
+  color: #5e492b;
+  text-decoration: none;
+  background-color: #b3ab96;
+  padding: 2px 6px;
+  border-radius: 5%;
+}
+/* Aside for world-building elements */
+aside {
+  background: #faf8f3;
+  border-left: 4px solid #8b6f47;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+}
+aside h3 {
+  color: #2c1810;
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+aside p {
+  text-indent: 0;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+/* Right sidebar - Related links */
+body > nav:last-of-type {
+  grid-column: 3;
+  background: #f9f6f0;
+  padding: 1.5rem 1rem;
+  border-left: 1px solid #d4a574;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+body > nav:last-of-type h1 {
+  color: #2c1810;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #8b6f47;
+  padding-bottom: 0.5rem;
+}
+body > nav:last-of-type ul {
+  list-style: none;
+}
+body > nav:last-of-type li {
+  margin: 0.75rem 0;
+}
+body > nav:last-of-type a {
+  color: #8b6f47;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+body > nav:last-of-type a:hover {
+  background: #3d2817;
+  color: #f5f1e8;
+  padding-left: 1rem;
+}
+/* Footer */
+footer {
+  grid-column: 1 / -1;
+  background: #2c1810;
+  color: #f5f1e8;
+  padding: 1.5rem;
+  text-align: center;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+footer li {
+  list-style: none;
+}
+footer a {
+  color: #d4a574;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #f5f1e8;
+  text-decoration: underline;
+}
+/* Responsive design */
+@media (max-width: 1024px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+  }
+  
+  body > nav:first-of-type,
+  body > nav:last-of-type {
+    position: static;
+    max-height: none;
+  }
 }

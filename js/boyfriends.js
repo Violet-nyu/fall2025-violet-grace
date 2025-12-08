@@ -1,6 +1,6 @@
 console.log("boyfriends");
 
-const boyfriends_title = document.createElement("h4");
+const boyfriends_title = document.createElement("h3");
 boyfriends_title.setAttribute("class", "boyfriends");
 boyfriends_title.textContent = 'Our Associates, aka "The Boyfriends"';
 section.appendChild(boyfriends_title);

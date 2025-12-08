@@ -1,0 +1,40 @@
+body{
+    background: rgb(24, 48, 63);
+    color:rgb(201, 217, 238);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main{
+    display:grid;
+    background: rgb(94, 23, 94);
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 25px;
+    color:rgb(201, 217, 238);
+}
+nav{
+    max-width: 200px;
+    background: rgb(87, 0, 87);
+    border-radius: 20px;
+}
+#dramatis_personae {
+    display:grid;
+}
+#nav_link {
+    width: 80%;
+    max-width: 160px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+#nav_link:hover {
+    animation: color-change 1s 1 forwards;
+}
+/* This is a simple little animation to change the color of the boxes around my links when a user hovers over them. Nothing fancy, but some simple responsiveness to the page */
+@keyframes color-change {
+    0% {background-color: antiquewhite;}
+    100% {background-color: rgb(160, 146, 168);}
+}
