@@ -100,7 +100,7 @@ main h4 {
 main p {
   margin-bottom: 1.5rem;
   text-align: justify;
-  text-indent: 2rem;
+  text-indent: 0;
   font-size: 1.1rem;
 }
 main p:first-of-type,
